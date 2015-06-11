@@ -1,0 +1,23 @@
+{
+	"name": "katas/roman-numerals",
+	"type": "library",
+	"description": "",
+    "license": "MIT",
+	"version": "1.0",
+	"authors": [
+		{
+			"name": "Jaspaul Bola",
+			"email": "jaspaul.b@gamil.com",
+			"homepage": "http://jaspaulbola.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Katas\\RomanNumerals\\": "src/"
+		}
+	},
+	"minimum-stability": "dev"
+}
