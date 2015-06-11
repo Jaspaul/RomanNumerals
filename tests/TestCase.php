@@ -1,4 +1,4 @@
-<?php namespace Katas\RomanNumerals\Test;
+<?php namespace Katas\RomanNumerals\Tests;
 
 abstract class TestCase extends \PHPUnit_Framework_TestCase
 {
