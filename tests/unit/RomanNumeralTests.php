@@ -31,4 +31,9 @@ class RomanNumeralTests extends TestCase {
 		$this->assertEquals('IV', $romanNumeral);
 	}
 
+	public function test_5_converts_to_V() {
+		$romanNumeral = $this->converter->arabicToRoman(5);
+		$this->assertEquals('V', $romanNumeral);
+	}
+
 }
