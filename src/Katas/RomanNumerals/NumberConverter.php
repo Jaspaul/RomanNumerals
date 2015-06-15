@@ -2,12 +2,12 @@
 
 class NumberConverter {
 	public function arabicToRoman($number) {
-		if ($number === 3) {
-			return 'III';
+		$result = '';
+
+		for ($i = 1; $i <= $number; ++$i) {
+			$result .= 'I';
 		}
-		if ($number === 2) {
-			return 'II';
-		}
-		return 'I';
+
+		return $result;
 	}
 }
