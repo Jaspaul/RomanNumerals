@@ -4,12 +4,14 @@ class NumberConverter {
 	public function arabicToRoman($number) {
 		$result = '';
 
-		if ($number === 10) {
-			return 'X';
+		if ($number >= 10) {
+			$result .= 'X';
+			$number -= 10;
 		}
 
-		if ($number === 9) {
-			return 'IX';
+		if ($number >= 9) {
+			$result .= 'IX';
+			$number -= 9;
 		}
 
 		if ($number >= 5) {
@@ -17,8 +19,9 @@ class NumberConverter {
 			$number -= 5;
 		}
 
-		if ($number === 4) {
-			return 'IV';
+		if ($number >= 4) {
+			$result .= 'IV';
+			$number -= 4;
 		}
 
 		for ($i = 1; $i <= $number; ++$i) {
