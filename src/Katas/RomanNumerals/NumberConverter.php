@@ -21,12 +21,11 @@ class NumberConverter {
 	public function arabicToRoman($number) {
 		$result = '';
 
-		list($number, $result) = $this->appendResult($number, 10, $result);
-		list($number, $result) = $this->appendResult($number, 9, $result);
-		list($number, $result) = $this->appendResult($number, 5, $result);
-		list($number, $result) = $this->appendResult($number, 4, $result);
-
 		while($number != 0) {
+			list($number, $result) = $this->appendResult($number, 10, $result);
+			list($number, $result) = $this->appendResult($number, 9, $result);
+			list($number, $result) = $this->appendResult($number, 5, $result);
+			list($number, $result) = $this->appendResult($number, 4, $result);
 			list($number, $result) = $this->appendResult($number, 1, $result);
 		}
 
