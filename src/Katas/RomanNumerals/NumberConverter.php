@@ -9,24 +9,16 @@ class NumberConverter {
 		1  => 'I'
 	];
 
-	private function appendResult($number, $value, $result) {
-		if (array_key_exists($value, $this->map) && $number >= $value) {
-			$result .= $this->map[$value];
-			$number -= $value;
-		}
-
-		return [$number, $result];
-	}
-
 	public function arabicToRoman($number) {
 		$result = '';
 
 		while($number != 0) {
-			list($number, $result) = $this->appendResult($number, 10, $result);
-			list($number, $result) = $this->appendResult($number, 9, $result);
-			list($number, $result) = $this->appendResult($number, 5, $result);
-			list($number, $result) = $this->appendResult($number, 4, $result);
-			list($number, $result) = $this->appendResult($number, 1, $result);
+			foreach (array_keys($this->map) as $value) {
+				if ($number >= $value) {
+					$result .= $this->map[$value];
+					$number -= $value;
+				}
+			}
 		}
 
 		return $result;
