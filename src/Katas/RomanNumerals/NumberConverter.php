@@ -5,7 +5,8 @@ class NumberConverter {
 		10 => 'X',
 		9  => 'IX',
 		5  => 'V',
-		4  => 'IV'
+		4  => 'IV',
+		1  => 'I'
 	];
 
 	private function appendResult($number, $value, $result) {
@@ -25,8 +26,8 @@ class NumberConverter {
 		list($number, $result) = $this->appendResult($number, 5, $result);
 		list($number, $result) = $this->appendResult($number, 4, $result);
 
-		for ($i = 1; $i <= $number; ++$i) {
-			$result .= 'I';
+		while($number != 0) {
+			list($number, $result) = $this->appendResult($number, 1, $result);
 		}
 
 		return $result;
