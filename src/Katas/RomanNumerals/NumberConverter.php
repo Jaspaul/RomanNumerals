@@ -2,11 +2,12 @@
 
 class NumberConverter {
 	private $map = [
-		10 => 'X',
-		9  => 'IX',
-		5  => 'V',
-		4  => 'IV',
-		1  => 'I'
+		100 => 'C',
+		10  => 'X',
+		9   => 'IX',
+		5   => 'V',
+		4   => 'IV',
+		1   => 'I'
 	];
 
 	public function arabicToRoman($number) {
@@ -17,6 +18,7 @@ class NumberConverter {
 				if ($number >= $value) {
 					$result .= $this->map[$value];
 					$number -= $value;
+					break;
 				}
 			}
 		}
