@@ -4,6 +4,10 @@ class NumberConverter {
 	public function arabicToRoman($number) {
 		$result = '';
 
+		if ($number === 10) {
+			return 'X';
+		}
+
 		if ($number === 9) {
 			return 'IX';
 		}
