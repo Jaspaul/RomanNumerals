@@ -1,6 +1,7 @@
 <?php namespace Katas\RomanNumerals;
 
 class NumberConverter {
+
 	private $map = [
 		100 => 'C',
 		10  => 'X',
@@ -25,4 +26,5 @@ class NumberConverter {
 
 		return $result;
 	}
+
 }
