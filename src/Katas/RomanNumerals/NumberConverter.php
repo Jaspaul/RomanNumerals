@@ -1,25 +1,17 @@
 <?php namespace Katas\RomanNumerals;
 
 class NumberConverter {
+	private $map = [
+		10 => 'X',
+		9  => 'IX',
+		5  => 'V',
+		4  => 'IV'
+	];
+
 	private function appendResult($number, $value, $result) {
-		if ($number >= 10) {
-			$result .= 'X';
-			$number -= 10;
-		}
-
-		if ($number >= 9) {
-			$result .= 'IX';
-			$number -= 9;
-		}
-
-		if ($number >= 5) {
-			$result .= 'V';
-			$number -= 5;
-		}
-
-		if ($number >= 4) {
-			$result .= 'IV';
-			$number -= 4;
+		if (array_key_exists($value, $this->map) && $number >= $value) {
+			$result .= $this->map[$value];
+			$number -= $value;
 		}
 
 		return [$number, $result];
