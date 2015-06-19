@@ -22,7 +22,7 @@ class NumberConverter {
 		$result = '';
 
 		while($number != 0) {
-			foreach($$this->map as $key => $value) {
+			foreach($this->map as $key => $value) {
 				if ($number >= $key) {
 					$result .= $value;
 					$number -= $key;
