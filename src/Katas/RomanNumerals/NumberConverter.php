@@ -22,10 +22,10 @@ class NumberConverter {
 		$result = '';
 
 		while($number != 0) {
-			foreach (array_keys($this->map) as $value) {
-				if ($number >= $value) {
-					$result .= $this->map[$value];
-					$number -= $value;
+			foreach($this->map as $key => $value) {
+				if ($number >= $key) {
+					$result .= $value;
+					$number -= $key;
 					break;
 				}
 			}
